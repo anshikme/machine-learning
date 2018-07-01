@@ -17,3 +17,8 @@ plt.scatter(X,Y)
 plt.plot(X,Yhat)
 
 plt.show()
+
+#Finding how well the model fits the data
+ss_res = ((Y-Yhat)**2).sum()
+ss_total = ((Y - Y.mean())**2).sum()
+r2= (1-ss_res/ss_total) #r2 --> 1 means best fit r2-->0/-1 worse the mode/not good fit
