@@ -1,0 +1,19 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+ data = pd.read_csv("C:\\Users\\science\\Downloads\\data_1d.csv")
+X= data.iloc[:,0]
+Y= data.iloc[:,1]
+#Show the data X vs Y
+plt.scatter(X,Y)
+plt.show
+denominator = X.dot(X) - (X.mean()*X.sum())
+a = ((Y.mean()*X.dot(X)) - (X.mean()*X.dot(Y)))/denominator
+b = (X.dot(Y)- (X.mean()*Y.sum()))/denominator
+
+
+Yhat = b*X + a
+plt.scatter(X,Y)
+plt.plot(X,Yhat)
+
+plt.show()
