@@ -1,0 +1,1 @@
+This is an attempt to create the codes of Machine learning using only Numpy or Pandas from scratch using pure mathematics. Do let me know if you can suggest some improvements would be happy to hear from you
